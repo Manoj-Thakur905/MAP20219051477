@@ -6,12 +6,11 @@
     
     $conn = new PDO("mysql:host=$dbhost;dbname=$dbname", $dbuser, $dbpass);
 
-    $query = "SELECT * FROM fruits";
+    $query = "SELECT * FROM users";
     $stmt = $conn->prepare($query);
     $stmt->execute();
 
     $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    print_r($result);
 
 ?>
 
