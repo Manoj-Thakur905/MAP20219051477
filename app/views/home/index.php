@@ -3,7 +3,9 @@
     <div class="page-header" id="banner">
         <div class="row">
             <div class="col-lg-12">
-                <h1>Welcome to LAB 5 Lab Work Done By Manoj Thakur</h1>
+                <h1>Welcome to LAB 7 </h1>
+				<h1>Work Done By Manoj Thakur</h1>
+				<h1>It is Just a Demo Page </h1>							
                 <p class="lead"> <?= date("F jS, Y"); ?></p>
             </div>
         </div>

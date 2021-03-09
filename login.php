@@ -1,27 +1,13 @@
-<?php
-	require_once('header.php');
-?>
 <html>
-	<head>
-		<title>Welcome to LAB 4</title>
+<head>
+	<title>LAB 6</title>
 	</head>
-
 	<body>
-	
-		<form action="login.php" method="POST">
-           <div class="container">
-                <label for="uname"><b>Username</b></label>
-                <input type="text" placeholder="Enter Username" name="user" required>
+            <div class="col-lg-12">
+                <h1>Welcome to Lab 6</h1>
+				<h2> Incompleted Lab Due to some errors in Coding and Links <h2>
+                <p class="lead"> <?= date("F jS, Y"); ?></p>
+            </div>
 
-                <label for="psw"><b>Password</b></label>
-                <input type="password" placeholder="Enter Password" name="pass" required>
-
-                <button type="submit">Login</button>
-	      </div>
-		</form>
-	
-	</body>
-</html>
-<?php
-	require_once('footer.php');
-?>
+		</body>
+	<html>

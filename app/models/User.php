@@ -40,5 +40,25 @@ class User {
 			die;
 		}
     }
+        public function user_exists($username)
+    {
+   
+    $db = db_connect();    
 
+if(isset($_POST['create']))
+{
+$sql_u = "select * from Users where username = '$username' " ;
+$res_u = mysqli_query($db, $sql_u) or die(mysqli_query($db));
+if (mysqli_num_rows($res_u) > 0) {
+$name_error = "Sorry Username already taken";
 }
+							else{
+$query = "insert into Users ('username','password') VALUES ('$username', '" .md5($password)."')";
+$res_u = mysqli_query($db, $query) or die(mysqli_query($db));
+echo "saved";
+exit();
+}
+}
+		}
+}
+
