@@ -17,10 +17,9 @@ class User {
          */
 		$username = strtolower($username);
 		$db = db_connect();
-        $statement = $db->prepare("select * from users
-                                WHERE username = :name;
-                ");
-        $statement->bindValue(':name', $username);
+        $statement = $db->prepare('select * from Users
+                                WHERE username = :username;');
+        $statement->bindValue(':username', $username);
         $statement->execute();
         $rows = $statement->fetch(PDO::FETCH_ASSOC);
 		
@@ -40,25 +39,23 @@ class User {
 			die;
 		}
     }
-        public function user_exists($username)
-    {
-   
-    $db = db_connect();    
-
-if(isset($_POST['create']))
-{
-$sql_u = "select * from Users where username = '$username' " ;
-$res_u = mysqli_query($db, $sql_u) or die(mysqli_query($db));
-if (mysqli_num_rows($res_u) > 0) {
-$name_error = "Sorry Username already taken";
+	public function user_exists($username)
+	{
+	
+	$db = db_connect();
+ 	$statement = $db->prepare("SELECT * FROM Users WHERE username= :username");
+	$statement->execute(array(':username' => $username));
+ 	$statement->execute();
+ 	$rows = $statement->fetchAll(PDO::FETCH_ASSOC);
+	$numberRows = count($rows);
+ 	return $numberRows;
+	}
+	
+	public function insert_new_user($username,$password)
+	{
+	$db = db_connect();
+	
+	$statement = $db->prepare("insert into Users (username, password) values(:username,:password)");
+	$statement->execute(array(':username' => $username, 'password'=>$password));
+	}
 }
-							else{
-$query = "insert into Users ('username','password') VALUES ('$username', '" .md5($password)."')";
-$res_u = mysqli_query($db, $query) or die(mysqli_query($db));
-echo "saved";
-exit();
-}
-}
-		}
-}
-
