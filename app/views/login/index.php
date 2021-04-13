@@ -1,9 +1,8 @@
-<?php require_once 'app/views/templates/headerPublic.php'?>
 <main role="main" class="container">
     <div class="page-header" id="banner">
         <div class="row">
             <div class="col-lg-12">
-                <h1>Enter to move forward You should enter Correct Details</h1>
+                <h1>Weather Report</h1>
 				
 				<?php if ($_SESSION['failedAuth'])
 				echo '<P> TRY AGAIN </P>'; 
@@ -36,4 +35,3 @@
 		</form> 
 	</div>
 </div>
-    <?php require_once 'app/views/templates/footer.php' ?>

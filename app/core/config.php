@@ -19,3 +19,4 @@ define('DB_USER',         'root');
 define('DB_PASS',         '');
 define('DB_DATABASE',     'map202');
 define('DB_PORT',         '');
+define('API_KEY', 'a37c998390c4a8566e2f2ed1002dab48');

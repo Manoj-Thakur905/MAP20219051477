@@ -3,9 +3,9 @@
     <div class="page-header" id="banner">
         <div class="row">
             <div class="col-lg-12">
-                <h1>Welcome to LAB 8 </h1>
+                <h1>Welcome to LAB 10 </h1>
 				<h1>Work Done By Manoj Thakur</h1>
-				<h1>It is Just a Demo Page </h1>							
+				<h1>It is Weather forcast page </h1>							
                 <p class="lead"> <?= date("F jS, Y"); ?></p>
             </div>
         </div>
@@ -19,4 +19,4 @@
         </div>
     </div>
 
-    <?php require_once 'app/views/templates/footer.php' ?>
+   
